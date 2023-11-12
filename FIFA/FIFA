@@ -1,0 +1,26 @@
+
+CREATE TABLE FIFA
+(
+ID VARCHAR(6),
+Nome VARCHAR(255),
+Idade INT,
+"Data Nascimento" DATE,
+Posição VARCHAR(4),
+Overall INT,
+Pé Bom VARCHAR(10),
+Altura FLOAT,
+Peso FLOAT,
+Genero VARCHAR(10),
+Chute INT,
+Passe INT,
+Drible INT,
+Defesa INT,
+Fisico INT,
+Atributo de Goleiro INT,
+Clube INT,
+Liga VARCHAR(255),
+Genero Liga VARCHAR(255),
+Nacionalidade VARCHAR(255),
+IMC FLOAT,
+Classificacao IMC VARCHAR(255)
+        );
