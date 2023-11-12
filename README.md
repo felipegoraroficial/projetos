@@ -5,19 +5,22 @@ por mim no meu trabalho onde saimos de arquivos
 excel armazenado em psta de trabalho em computadores locais
 e apresentacoes criadas via power point para uma
 estrutura de dados automatizado em nuvem da Azure
+e para demonstrar os frutos do meu trabalho, criei
+uma replica do que temos utilizandos dados de jogadores
+de futebol do jogo de videogame EA FC.
 
-Esse ambiente foi criado em minha maquina 
+O ambiente foi criado em minha maquina 
 virtual com o sistema operacional Ubunto
 na virtual box da oracle.
 
-os fluxo foi criado totalmente em python,
+O fluxo foi criado totalmente em python,
 orquestrado via apache airflow (localhos),
 banco de dados do MySQL (local host) que será
 usado como banco de dados de backup,
 datalake da Azure e banco de dados MySQL da Azure
 que será utilizado para conexoes em ferramentas de BI.
 
-o objetivo do ambiente é acessar a API
+O objetivo do ambiente é acessar a API
 do site futeDB com informações dos jogadores
 de futebol do jogo da EA FC, armazenar os dados
 cru em um container do datalake da Azure
