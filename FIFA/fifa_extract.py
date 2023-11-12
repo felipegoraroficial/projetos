@@ -12,10 +12,10 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 api_key = "7b1b94b8-78ca-4f43-b31c-9b3f4199a1a4" 
 
-account_name = 'fececadatalake'
-account_key = 'VAz99hLfUkfUjpBRV2hw4TdmSZj2VDxc3pPcETbKBwiOa2/OLxHJlU+mO5NrFZMixXKZCRUV16+A+ASt2GsA8A=='
-containername_raw = 'raw'
-containername_produce = 'produce'
+account_name = 'nome do seu datalake'
+account_key = 'sua chave'
+containername_raw = 'nome do seu container'
+containername_produce = 'nome do seu container'
 transport = RequestsTransport(connection_verify = False)
 
 def extract_api():
