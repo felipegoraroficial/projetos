@@ -9,9 +9,9 @@ from azure.core.pipeline.transport import RequestsTransport
 from io import BytesIO
 import io
 
-account_name = 'fececadatalake'
-account_key = 'VAz99hLfUkfUjpBRV2hw4TdmSZj2VDxc3pPcETbKBwiOa2/OLxHJlU+mO5NrFZMixXKZCRUV16+A+ASt2GsA8A=='
-containername_produce = 'produce'
+account_name = 'nome do seu datalake'
+account_key = 'sua chave key'
+containername_produce = 'seu container name'
 transport = RequestsTransport(connection_verify=False)
 
 def load_data():
@@ -32,10 +32,10 @@ def load_data():
     fifa = ler_blob_1_sheet(account_name, account_key, containername_produce)
 
     # Configuração de conexão com o banco de dados
-    host = 'localhost'
-    banco_de_dados = 'projetos'
-    usuario = 'root'
-    senha = 'Fececa13'
+    host = 'seu host'
+    banco_de_dados = 'nome do seu banco de dados'
+    usuario = 'seu usuario'
+    senha = 'sua senha'
 
     # Criação da string de conexão
     conexao_str = f"mysql+mysqlconnector://{usuario}:{senha}@{host}/{banco_de_dados}"
