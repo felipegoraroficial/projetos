@@ -43,11 +43,14 @@ def extract_api():
                     
                 nacao_list.append(infos)
 
-                image_url = f"https://futdb.app/api/nations/{item['id']}/image"
-                image_response = requests.get(image_url, headers=headers)
+        for item in nacao_list:
+            national_id = item['ID Nacionalidade']
+            url_imagem = f"https://futdb.app/api/nations/{national_id}/image"
+            response = requests.get(url_imagem, headers=headers)
 
-                image_data = image_response.content
-                infos["Imagem Pais"] = image_data
+            image_data = response.content
+            item['Imagem Pais'] = image_data
+
 
         df = pd.DataFrame(nacao_list)
 
@@ -80,11 +83,13 @@ def extract_api():
                 
                 liga_list.append(infos)
 
-                image_url = f"https://futdb.app/api/leagues/{item['id']}/image"
-                image_response = requests.get(image_url, headers=headers)
+        for item in liga_list:
+            league_id = item['ID Liga']
+            url_imagem = f"https://futdb.app/api/leagues/{league_id}/image"
+            response = requests.get(url_imagem, headers=headers)
 
-                image_data = image_response.content
-                infos["Imagem Liga"] = image_data
+            image_data = response.content
+            item['Imagem Liga'] = image_data
 
         df = pd.DataFrame(liga_list)
 
@@ -116,11 +121,13 @@ def extract_api():
                 
                 clube_list.append(infos)
 
-                image_url = f"https://futdb.app/api/clubs/{item['id']}/image"
-                image_response = requests.get(image_url, headers=headers)
+        for item in clube_list:
+            club_id = item['ID Clube']
+            url_imagem = f"https://futdb.app/api/clubs/{club_id}/image"
+            response = requests.get(url_imagem, headers=headers)
 
-                image_data = image_response.content
-                infos["Imagem Clube"] = image_data
+            image_data = response.content
+            item['Imagem Clube'] = image_data
 
         df = pd.DataFrame(clube_list)
 
@@ -167,13 +174,13 @@ def extract_api():
                     "Atributo de Goleiro": item['goalkeeperAttributes'],
                     }
                 
-                jogadores_list.append(infos)
+        for item in jogadores_list:
+            player_id = item['ID']
+            url_imagem = f"https://futdb.app/api/players/{player_id}/image"
+            response = requests.get(url_imagem, headers=headers)
 
-                image_url = f"https://futdb.app/api/players/{item['id']}/image"
-                image_response = requests.get(image_url, headers=headers)
-
-                image_data = image_response.content
-                infos["Imagem Jogador"] = image_data
+            image_data = response.content
+            item['Imagem Jogador'] = image_data
 
         df = pd.DataFrame(jogadores_list)
 
