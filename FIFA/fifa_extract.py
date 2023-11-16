@@ -3,7 +3,6 @@ import json
 import pandas as pd
 from azure.storage.blob import BlobServiceClient,BlobClient,ContainerClient,__version__
 from azure.core.pipeline.transport import RequestsTransport
-from io import BytesIO
 import io
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -44,6 +43,12 @@ def extract_api():
                     
                 nacao_list.append(infos)
 
+                image_url = f"https://futdb.app/api/nations/{item['id']}/image"
+                image_response = requests.get(image_url, headers=headers)
+
+                image_data = image_response.content
+                infos["Imagem Pais"] = image_data
+
         df = pd.DataFrame(nacao_list)
 
         return df
@@ -75,6 +80,12 @@ def extract_api():
                 
                 liga_list.append(infos)
 
+                image_url = f"https://futdb.app/api/leagues/{item['id']}/image"
+                image_response = requests.get(image_url, headers=headers)
+
+                image_data = image_response.content
+                infos["Imagem Liga"] = image_data
+
         df = pd.DataFrame(liga_list)
 
         return df
@@ -104,6 +115,12 @@ def extract_api():
                     }
                 
                 clube_list.append(infos)
+
+                image_url = f"https://futdb.app/api/clubs/{item['id']}/image"
+                image_response = requests.get(image_url, headers=headers)
+
+                image_data = image_response.content
+                infos["Imagem Clube"] = image_data
 
         df = pd.DataFrame(clube_list)
 
@@ -142,6 +159,7 @@ def extract_api():
                     "Peso": item['weight'],
                     "Genero": item['gender'],
                     "Chute": item['shooting'],
+                    "Velocidade": item['pace'],
                     "Passe": item['passing'],
                     "Drible": item['dribbling'],
                     "Defesa": item['defending'],
@@ -150,6 +168,12 @@ def extract_api():
                     }
                 
                 jogadores_list.append(infos)
+
+                image_url = f"https://futdb.app/api/players/{item['id']}/image"
+                image_response = requests.get(image_url, headers=headers)
+
+                image_data = image_response.content
+                infos["Imagem Jogador"] = image_data
 
         df = pd.DataFrame(jogadores_list)
 
