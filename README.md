@@ -11,7 +11,9 @@ Secure and efficient storage in Datalakes and databases within the Azure ecosyst
 Feel free to explore the code and scripts to understand the approach used in building these data pipelines.
 
 How to Use
+
 You can clone this repository to your computer or download the files individually. Each script has a comment explaining what it does, what the parameters are, the dependencies, and the expected result. You can run the scripts in your terminal or in an Integrated Development Environment (IDE) of your preference.
 
 How to Contribute
+
 If you'd like to contribute to this repository, feel free to send a pull request or open an issue. I'll be happy to receive feedback, suggestions, corrections, or new script functions. Please follow good coding and documentation practices and respect GitHub's code of conduct.
