@@ -1,59 +1,16 @@
-# Pipeline de Dados da FIFA
+# FIFA Data Pipeline
 
-Criei este projeto para demonstrar 
-o fluxo desenvolvido por mim no meu 
-trabalho. Saímos de arquivos 
-Excel armazenados em pastas de trabalho 
-em computadores locais e apresentações 
-criadas via PowerPoint para uma 
-estrutura de dados automatizada na 
-nuvem da Azure. Para ilustrar os 
-resultados do meu trabalho, 
-reproduzi uma versão utilizando 
-dados de jogadores de futebol do 
-jogo de videogame EA FC.
+I created this project to showcase the workflow I developed in my job. We transitioned from Excel files stored in local computer folders and PowerPoint presentations to an automated data structure in the Azure cloud. To illustrate the outcomes of my work, I replicated a version using player data from the EA FC video game.
 
-O ambiente foi configurado em minha 
-máquina virtual com o sistema 
-operacional Ubuntu na VirtualBox da Oracle.
+The environment was set up on my virtual machine with the Ubuntu operating system in Oracle's VirtualBox.
 
-O fluxo foi totalmente desenvolvido 
-em Python, orquestrado via 
-Apache Airflow (localhost), utilizando 
-um banco de dados MySQL (localhost) 
-como backup e um Data Lake da Azure, 
-além de um banco de dados MySQL na Azure 
-para conexões em ferramentas de BI.
+The entire workflow was developed in Python, orchestrated via Apache Airflow (localhost), utilizing a MySQL database (localhost) as a backup and an Azure Data Lake, along with a MySQL database in Azure for connections in BI tools.
 
-O objetivo do ambiente é acessar a API 
-do site futeDB, que contém informações 
-dos jogadores de futebol do jogo EA FC. 
-Os dados brutos são armazenados em um 
-contêiner do Data Lake da Azure, 
-denominado "Raw". Em seguida, os dados 
-são tratados e limpos, sendo o dataframe 
-salvo em outro contêiner chamado "Produce", 
-onde os dados tratados são armazenados. 
-Posteriormente, esses dados tratados são 
-inseridos em um banco de dados local do 
-MySQL, que servirá como nosso banco de 
-dados de backup. O mesmo procedimento 
-será realizado para o banco de dados MySQL 
-no ambiente da Azure, que será utilizado 
-para conectar ferramentas de BI na criação 
-de dashboards.
+The environment's objective is to access the futeDB website API, which contains information about the EA FC video game's football players. Raw data is stored in an Azure Data Lake container named "Raw". Then, the data is processed and cleaned, with the dataframe saved in another container called "Produce," where the treated data is stored. Subsequently, this treated data is inserted into a local MySQL database, which serves as our backup database. The same procedure will be performed for the MySQL database in the Azure environment, used to connect BI tools in creating dashboards.
 
-Pontos importantes a serem considerados:
-- É possível utilizar o Apache Airflow e 
-transferir dados do Data Lake para o 
-banco de dados MySQL da Azure usando o 
-Data Factory da própria Azure. No entanto, 
-optei por não utilizar esses recursos 
-para economizar na produção deste pipeline.
+Important points to consider:
 
-Bibliotecas utilizadas: pandas, request, 
-json, azure.storage.blob, io, 
-mysql.connector, sqlalchemy, airflow, 
-datetime.
+It is possible to use Apache Airflow and transfer Data Lake data to Azure's MySQL database using Azure's Data Factory. However, I chose not to use these resources to save on the production of this pipeline.
+Libraries used: pandas, request, json, azure.storage.blob, io, mysql.connector, sqlalchemy, airflow, datetime.
 
-Versão do Python: 3.10.12 64-bit.
+Python: 3.10.12 64-bit.
