@@ -1,17 +1,17 @@
 # Projetos
-Este repositório foi criado para apresentar uma coleção de scripts que demonstram minha expertise na construção de pipelines de dados. Aqui, você encontrará funções abrangendo desde a extração de dados, seja de bancos de dados, APIs ou utilizando Web Scrapy, até o tratamento, modelagem e armazenamento dos dados em Datalakes ou bancos de dados.
+This repository was created to showcase a collection of scripts demonstrating my expertise in building data pipelines. Here, you'll find functions ranging from data extraction, whether from databases, APIs, or utilizing Web Scrapy, to data processing, modeling, and storage in Datalakes or databases.
 
-Os scripts foram desenvolvidos em Python e são orquestrados pelo Apache Airflow. Todo o armazenamento é realizado nos bancos de dados e Datalakes do ambiente Azure.
+The scripts were developed in Python and orchestrated by Apache Airflow. All storage is done in databases and Datalakes within the Azure environment.
 
-Principais aspectos abordados:
+Key aspects covered:
 
-Extração de dados de diversas fontes, como bancos de dados, APIs e Web Scrapy.
-Processamento e modelagem dos dados para preparação.
-Armazenamento seguro e eficiente em Datalakes e bancos de dados do ecossistema Azure.
-Sinta-se à vontade para explorar o código e os scripts para entender a abordagem utilizada na construção desses pipelines de dados.
+Data extraction from various sources such as databases, APIs, and Web Scrapy.
+Data processing and modeling for preparation purposes.
+Secure and efficient storage in Datalakes and databases within the Azure ecosystem.
+Feel free to explore the code and scripts to understand the approach used in building these data pipelines.
 
-#Como usar
-Você pode clonar este repositório disponiveis para o seu computador ou baixar os arquivos individualmente. Cada script tem um comentário explicando o que ele faz, quais são os parâmetros, as dependências e o resultado esperado. Você pode executar os scripts no seu terminal ou em um ambiente de desenvolvimento integrado (IDE) de sua preferência.
+How to Use
+You can clone this repository to your computer or download the files individually. Each script has a comment explaining what it does, what the parameters are, the dependencies, and the expected result. You can run the scripts in your terminal or in an Integrated Development Environment (IDE) of your preference.
 
-#Como contribuir
-Se você quiser contribuir com este repositório, sinta-se à vontade para enviar uma solicitação de pull ou abrir uma issue. Eu ficarei feliz em receber feedback, sugestões, correções ou novas funções de script. Por favor, siga as boas práticas de codificação e documentação, e respeite o código de conduta do GitHub.
+How to Contribute
+If you'd like to contribute to this repository, feel free to send a pull request or open an issue. I'll be happy to receive feedback, suggestions, corrections, or new script functions. Please follow good coding and documentation practices and respect GitHub's code of conduct.
