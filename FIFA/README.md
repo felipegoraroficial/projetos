@@ -4,7 +4,7 @@ I created this project to showcase the workflow I developed in my job. We transi
 
 The environment was set up on my virtual machine with the Ubuntu operating system in Oracle's VirtualBox.
 
-The entire workflow was developed in Python, orchestrated via Apache Airflow (localhost), utilizing a MySQL database (localhost) as a backup and an Azure Data Lake, along with a MySQL database in Azure for connections in BI tools.
+The entire workflow was developed in Python, orchestrated by Apache Airflow (localhost), utilizing a MySQL database (localhost) as a backup and an Azure Data Lake, along with a MySQL database in Azure for connections in BI tools.
 
 The environment's objective is to access the futeDB website API, which contains information about the EA FC video game's football players. Raw data is stored in an Azure Data Lake container named "Raw". Then, the data is processed and cleaned, with the dataframe saved in another container called "Produce," where the treated data is stored. Subsequently, this treated data is inserted into a local MySQL database, which serves as our backup database. The same procedure will be performed for the MySQL database in the Azure environment, used to connect BI tools in creating dashboards.
 
