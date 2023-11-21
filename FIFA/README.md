@@ -14,3 +14,5 @@ It is possible to use Apache Airflow and transfer Data Lake data to Azure's MySQ
 Libraries used: pandas, request, json, azure.storage.blob, io, mysql.connector, sqlalchemy, airflow, datetime.
 
 Python: 3.10.12 64-bit.
+
+Dashboard: https://bit.ly/fifa-dashboard
