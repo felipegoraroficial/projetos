@@ -28,7 +28,7 @@ def load_data_produce():
         host="seu host",
         user="seu usuário",
         password="sua senha",
-        database="seu banco de dados"
+        database="nome do seu abnco de dados"
     )
 
     # Ler as tabelas desejadas do MySQL
@@ -40,11 +40,9 @@ def load_data_produce():
     # Fechar a conexão do MySQL
     conexao_mysql.close()
 
-    print(fifa_jogador)
-
     # Dados de conexão ao banco de dados SQL Server
     server = 'seu servidor'
-    database = 'seu banco de dados'
+    database = 'nome do seu banco de dados'
     username = 'seu usuário'
     password = 'sua senha'
     driver = '{ODBC Driver 17 for SQL Server}'
@@ -57,9 +55,15 @@ def load_data_produce():
     def inserir_tabela(df, nome_tabela, conexao_sql):
         cursor = conexao_sql.cursor()
 
+        delete_query = f"DELETE FROM {nome_tabela}"
+        cursor.execute(delete_query)
+        conexao_sql.commit()
+        print(f"Previous data in table '{nome_tabela}' deleted successfully")
+
         # Substitua 'schema' pelo esquema desejado (opcional)
         engine = create_engine(f'mssql+pyodbc://{username}:{password}@{server}/{database}?driver=ODBC+Driver+17+for+SQL+Server')
         df.to_sql(nome_tabela, con=engine, if_exists='replace', index=False)
+        print(f"Previous data in table '{nome_tabela}' insert successfully")
 
         cursor.close()
 

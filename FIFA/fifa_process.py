@@ -15,7 +15,7 @@ from airflow.operators.python import PythonOperator
 local_tz = pendulum.timezone('America/Sao_Paulo')
 
 default_args = {
-    "owner": "seu usuário",
+    "owner": "seu nome",
     "start_date": datetime(2023, 11, 9, tzinfo=local_tz),  # Defina o fuso horário para a data de início
 }
 

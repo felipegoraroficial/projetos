@@ -7,10 +7,10 @@ import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
-account_name = 'seu datalake'
-account_key = 'sua key'
-containername_raw = 'seu container'
-containername_produce = 'seu container'
+account_name = 'nome do seu datalake'
+account_key = 'sua chave'
+containername_raw = 'nome do container'
+containername_produce = 'nome do container'
 transport = RequestsTransport(connection_verify = False)
 
 
@@ -91,7 +91,7 @@ def tratar_dados():
             df = pd.DataFrame({'ID': file_list})
             df['ID'] = df['ID'].str.replace(f'{directory}/', '').str.replace('.jpg', '')
 
-            url_prefix = f"https://{account_name}.blob.core.windows.net/{container_name}/"
+            url_prefix = f"https://{account_name}.blob.core.windows.net/{container_name}/{directory}/"
             df['url'] = url_prefix + df['ID'] + '.jpg'
             return df
 
@@ -99,10 +99,10 @@ def tratar_dados():
             """
             Função principal para listar blobs de um diretório específico e criar um DataFrame com IDs e URLs.
             """
-            account_name = 'seu datalake'
-            account_key = 'sua key'
-            container_name = 'seu container'
-            directory = 'seu diretorio'
+            account_name = 'nome do seu datalake'
+            account_key = 'sua chave'
+            container_name = 'nome do container'
+            directory = 'nome do diretorio'
 
             try:
                 file_list = list_blobs(account_name, account_key, container_name, directory)
@@ -223,7 +223,7 @@ def tratar_dados():
             df = pd.DataFrame({'ID': file_list})
             df['ID'] = df['ID'].str.replace(f'{directory}/', '').str.replace('.jpg', '')
 
-            url_prefix = f"https://{account_name}.blob.core.windows.net/{container_name}/"
+            url_prefix = f"https://{account_name}.blob.core.windows.net/{container_name}/{directory}/"
             df['url'] = url_prefix + df['ID'] + '.jpg'
             return df
 
@@ -231,10 +231,10 @@ def tratar_dados():
             """
             Função principal para listar blobs de um diretório específico e criar um DataFrame com IDs e URLs.
             """
-            account_name = 'seu datalake'
-            account_key = 'sua key'
-            container_name = 'seu container'
-            directory = 'seu diretorio'
+            account_name = 'nome do seu datalake'
+            account_key = 'sua chave'
+            container_name = 'nome do container'
+            directory = 'nome do diretorio'
 
             try:
                 file_list = list_blobs(account_name, account_key, container_name, directory)
@@ -313,7 +313,7 @@ def tratar_dados():
             df = pd.DataFrame({'ID': file_list})
             df['ID'] = df['ID'].str.replace(f'{directory}/', '').str.replace('.jpg', '')
 
-            url_prefix = f"https://{account_name}.blob.core.windows.net/{container_name}/"
+            url_prefix = f"https://{account_name}.blob.core.windows.net/{container_name}/{directory}/"
             df['url'] = url_prefix + df['ID'] + '.jpg'
             return df
 
@@ -321,10 +321,10 @@ def tratar_dados():
             """
             Função principal para listar blobs de um diretório específico e criar um DataFrame com IDs e URLs.
             """
-            account_name = 'seu datalake'
-            account_key = 'sua key'
-            container_name = 'seu container'
-            directory = 'seu diretorio'
+            account_name = 'nome do seu datalake'
+            account_key = 'sua chave'
+            container_name = 'nome do container'
+            directory = 'nome do diretorio'
 
             try:
                 file_list = list_blobs(account_name, account_key, container_name, directory)
@@ -402,7 +402,7 @@ def tratar_dados():
             df = pd.DataFrame({'ID': file_list})
             df['ID'] = df['ID'].str.replace(f'{directory}/', '').str.replace('.jpg', '')
 
-            url_prefix = f"https://{account_name}.blob.core.windows.net/{container_name}/"
+            url_prefix = f"https://{account_name}.blob.core.windows.net/{container_name}/{directory}/"
             df['url'] = url_prefix + df['ID'] + '.jpg'
             return df
 
@@ -410,10 +410,10 @@ def tratar_dados():
             """
             Função principal para listar blobs de um diretório específico e criar um DataFrame com IDs e URLs.
             """
-            account_name = 'seu datalake'
-            account_key = 'sua key'
-            container_name = 'seu container'
-            directory = 'seu diretorio'
+            account_name = 'nome do seu datalake'
+            account_key = 'sua chave'
+            container_name = 'nome do container'
+            directory = 'nome do diretorio'
 
             try:
                 file_list = list_blobs(account_name, account_key, container_name, directory)

@@ -11,15 +11,14 @@ import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
-
-api_key = "sua key" 
+api_key = "sua chave" 
 headers = {"X-AUTH-TOKEN": api_key}
 
-account_name = 'seu datalake'
-account_key = 'sua key'
-containername_raw = 'seu container'
-containername_produce = 'seu container'
-containername_imagens = 'seu container'
+account_name = 'nome do seu datalake'
+account_key = 'sua chave'
+containername_raw = 'nome do container'
+containername_produce = 'nome do container'
+containername_imagens = 'nome do container'
 transport = RequestsTransport(connection_verify = False)
 
 def extract_api_liga():
