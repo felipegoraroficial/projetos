@@ -18,7 +18,5 @@ CREATE TABLE [dbo].[FIFA_JOGADOR]
         [Drible] [INT] NULL,
         [Defesa] [INT] NULL,
         [Fisico] [INT] NULL,
-        [Atributo_de_Goleiro] [INT] NULL,
-        [IMC] [FLOAT] NULL,
-        [Classificacao_IMC] [VARCHAR] (8000)
+        [Atributo_de_Goleiro] [INT] NULL
 );
