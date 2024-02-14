@@ -1,4 +1,4 @@
-# FIFA Data Pipeline
+# FIFA_v1
 
 I created this project to showcase the workflow I developed in my job. We transitioned from Excel files stored in local computer folders and PowerPoint presentations to an automated data structure in the Azure cloud. To illustrate the outcomes of my work, I replicated a version using player data from the EA FC video game.
 
