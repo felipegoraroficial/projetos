@@ -2,7 +2,7 @@ CREATE TABLE [dbo].[FIFA_JOGADOR]
 (
         [ID_Clube] [INT] NULL,
         [ID_Liga] [INT] NULL,
-        [ID_Nacionaligade] [INT] NULL,
+        [ID_Nacionalidade] [INT] NULL,
         [Nome] [VARCHAR] (8000),
         [Idade] [INT] NULL,
         [Data_Nascimento] [DATE] NULL,
