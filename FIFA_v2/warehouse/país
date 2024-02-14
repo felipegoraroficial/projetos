@@ -1,5 +1,5 @@
 CREATE TABLE [dbo].[FIFA_PAIS]
 (
-        [ID_Nacionaligade] [INT] NULL,
-        [Nacionaligade] [VARCHAR] (8000)
+        [ID_Nacionalidade] [INT] NULL,
+        [Nacionalidade] [VARCHAR] (8000)
 );
