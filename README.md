@@ -1,13 +1,13 @@
 # Projetos
 This repository was created to showcase a collection of scripts demonstrating my expertise in building data pipelines. Here, you'll find functions ranging from data extraction, whether from databases, APIs, or utilizing Web Scrapy, to data processing, modeling, and storage in Datalakes or databases.
 
-The scripts were developed in Python and orchestrated by Apache Airflow. All storage is done in databases and Datalakes within the Azure environment.
+The scripts were developed in Python, Pyspark and SQL and orchestrated by Apache Airflowe in some cases. All storage is done in databases and Datalakes within cloud environment.
 
 Key aspects covered:
 
 Data extraction from various sources such as databases, APIs, and Web Scrapy.
 Data processing and modeling for preparation purposes.
-Secure and efficient storage in Datalakes and databases within the Azure ecosystem.
+Secure and efficient storage in Datalakes and databases within the cloud ecosystem.
 Feel free to explore the code and scripts to understand the approach used in building these data pipelines.
 
 How to Use
