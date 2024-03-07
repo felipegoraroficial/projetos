@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: sources
+    database: scrapy-project-415116
+    schema: Nintendo
+    tables:
+      - name: Kabum
+      - name: Magalu
+      - name: Mercado Livre
