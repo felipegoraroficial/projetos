@@ -49,10 +49,13 @@ df_final = pd.concat([df[['success']], df_expanded], axis=1)
 # Exibir o DataFrame final
 print(df_final)
 
-# Salvar a lista em formato JSON
-with open('app_details.json', 'w', encoding='utf-8') as f:
+# Caminho para salvar o arquivo JSON
+file_path = r'C:\\Users\\felip\\OneDrive\\Cursos e Certificados\\Data Scientis\\app_details.json'
+
+# Salvar a lista em formato JSON no caminho especificado
+with open(file_path, 'w', encoding='utf-8') as f:
     json.dump(app_details_list, f, ensure_ascii=False, indent=4)
 
-print("Lista salva como 'app_details.json'")
+print(f"Lista salva em {file_path}")
 
 
