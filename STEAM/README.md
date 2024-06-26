@@ -23,6 +23,7 @@ The final step involves filtering the dataframe to remove duplicates, keeping on
 ## Automation and Monitoring: 
 To ensure this process occurs daily without failures, I configured workflows in Databricks that follow the steps mentioned above. Additionally, I created automated email alerts to notify about the completion of the workflows, any delays, or execution failures.
 
-![workflow](https://github.com/felipegoraroficial/projetos/assets/138418925/3f682682-1e51-4c33-8ae5-a3d0235e8a4e)
+![steam_game](https://github.com/felipegoraroficial/projetos/assets/138418925/9f0463af-a9ab-47fa-8cbb-72abc1a75877)
+![steam_user](https://github.com/felipegoraroficial/projetos/assets/138418925/2fedb2f4-7e59-4efd-b684-6745aebf0c67)
 
 ![notifi](https://github.com/felipegoraroficial/projetos/assets/138418925/b980fda3-a63a-4a62-9f16-f1fc008fb43f)  ![trigger](https://github.com/felipegoraroficial/projetos/assets/138418925/49df47a1-bc7a-469c-8ed1-7c1fe8d05ff2) ![computer](https://github.com/felipegoraroficial/projetos/assets/138418925/dcc79ce8-857b-4964-8bd7-cc68fc6cde7e)
