@@ -7,8 +7,8 @@ import pandas as pd
 # COMMAND ----------
 
 # Substitua 'YOUR_API_KEY' pela sua chave da API da Steam
-API_KEY = '1A1F4922939AFD7DFB99B30C31BCE24F'
-STEAM_ID = '76561198991169245'  # Substitua pelo ID Steam do seu perfil
+API_KEY = ''   # Substitua pela sua KEY DA API da Steam
+STEAM_ID = ''  # Substitua pelo ID Steam do seu perfil
 
 # Endpoint para obter os jogos possuídos por um usuário
 url = f'http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key={API_KEY}&steamid={STEAM_ID}&format=json'
