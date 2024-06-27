@@ -6,7 +6,7 @@ In this personal project, I utilize Databricks on Google Cloud Platform (GCP). I
 
 An interesting strategy I incorporated into this project was to store the extracted data in the "raw" folder of the datalake (bucket) in JSON format, with the filename corresponding to the extraction date. This is done instead of overwriting old data with new data and, at the end, instead of appending to the table within the data warehouse, I handle duplicates, keeping only the most recent values. I believe this approach saves costs by avoiding overloading the data warehouse with duplicate information.
 
-![intro](https://github.com/felipegoraroficial/projetos/assets/138418925/c6435219-62e8-419c-be10-8f8417c8ce53)
+![Steam](https://github.com/felipegoraroficial/projetos/assets/138418925/4405a38f-f516-4420-adbc-d506dab94a28)
 
 ## Data Extraction:
 The heart of the project is the daily extraction of details about games, DLCs, and other content directly from the Steam API, as well as specific data from my user profile, such as the time spent on each game. This information is collected in JSON format and stored in the 'raw' folder of a bucket, organized by extraction date.
