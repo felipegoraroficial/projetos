@@ -2,7 +2,9 @@
 
 
 ## Introduction: 
-In a world where data is the new oil, the ability to efficiently extract, transform, and load information is crucial for any business. With this in mind, I developed a robust and automated data pipeline using Databricks on the Google Cloud Platform, focusing on the analysis and monitoring of gaming activities on Steam.
+In this personal project, I utilize Databricks on Google Cloud Platform (GCP). I recognized the need to incorporate the Databricks tool into my daily work routine, and since January 2024, I have begun practicing with the Databricks environment to handle large volumes of data. Additionally, Databricks allows me to integrate scripts with a Git version control system, facilitates the administration and onboarding of new users to the environment, and enables the rapid scaling of the cluster as needed.
+
+An interesting strategy I incorporated into this project was to store the extracted data in the "raw" folder of the datalake (bucket) in JSON format, with the filename corresponding to the extraction date. This is done instead of overwriting old data with new data and, at the end, instead of appending to the table within the data warehouse, I handle duplicates, keeping only the most recent values. I believe this approach saves costs by avoiding overloading the data warehouse with duplicate information.
 
 ![intro](https://github.com/felipegoraroficial/projetos/assets/138418925/c6435219-62e8-419c-be10-8f8417c8ce53)
 
