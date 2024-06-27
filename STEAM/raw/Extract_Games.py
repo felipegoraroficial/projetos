@@ -16,7 +16,7 @@ game_details_list = []
 # COMMAND ----------
 
 # Itera sobre os aplicativos da lista obtida
-for app in app_list['applist']['apps'][:1000]:
+for app in app_list['applist']['apps']:
     if app['name'] != '':  # Verifica se o nome do aplicativo não está vazio
         appid = app['appid']  # Obtém o ID do aplicativo
         try:
