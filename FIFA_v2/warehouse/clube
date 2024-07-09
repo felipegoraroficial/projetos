@@ -1,6 +1,0 @@
-CREATE TABLE [dbo].[FIFA_CLUBE]
-(
-        [ID_Clube] [INT] NULL,
-        [Clube] [VARCHAR] (8000),
-        [ID_Liga] [INT] NULL
-);
