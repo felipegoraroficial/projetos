@@ -2,17 +2,17 @@ from airflow import DAG
 from datetime import datetime
 import pendulum
 from airflow.operators.python import PythonOperator
-from tasks.extract.extract_club import obter_total_paginas_clube, clube, imagem_clube
-from tasks.extract.extract_league import obter_total_paginas_liga, liga, imagem_liga
-from tasks.extract.extract_nations import obter_total_paginas_país, país, imagem_país
-from tasks.extract.extract_players import obter_total_paginas_jogador, jogador, imagem_jogador
-from tasks.bronze.bronze_club import get_gcs_bucket, list_blobs_with_prefix, read_json_blobs, process_json_data
+from fifa.extract.extract_club import obter_total_paginas_clube, clube, imagem_clube
+from fifa.extract.extract_league import obter_total_paginas_liga, liga, imagem_liga
+from fifa.extract.extract_nations import obter_total_paginas_país, país, imagem_país
+from fifa.extract.extract_players import obter_total_paginas_jogador, jogador, imagem_jogador
+from fifa.bronze.process_bronze import identify_blobs, read_blob_data, process_blob_data
 
 # Defina o fuso horário desejado (São Paulo, Brasil)
 local_tz = pendulum.timezone('America/Sao_Paulo')
 
 default_args = {
-    "owner": "airflow",
+    "owner": "felipe.pegoraro",
     "start_date": datetime(2024, 6, 24, tzinfo=local_tz),
 }
 
@@ -20,7 +20,6 @@ dag = DAG(
     "fifa",
     default_args=default_args,
     schedule_interval="0 6 * * 1-5",
-    max_active_runs=1,
     catchup=False
 )
 
@@ -113,25 +112,24 @@ img_players = PythonOperator(
 #BRONZE STEP
 
 
-task_list_blobs = PythonOperator(
-    task_id='list_blobs_with_prefix',
-    python_callable=list_blobs_with_prefix,
-    provide_context=True, 
+identify_blobs_task = PythonOperator(
+    task_id='identify_blobs',
+    python_callable=identify_blobs,
+    provide_context=True,
     dag=dag
 )
 
-
-task_read_json_blobs = PythonOperator(
-    task_id='read_json_blobs',
-    python_callable=read_json_blobs,
-    provide_context=True,  
+read_blob_data_task = PythonOperator(
+    task_id='read_blob_data',
+    python_callable=read_blob_data,
+    provide_context=True,
     dag=dag
 )
 
-task_process_json_data = PythonOperator(
-    task_id='process_json_data',
-    python_callable=process_json_data,
-    provide_context=True,  
+process_blob_data_task = PythonOperator(
+    task_id='process_blob_data',
+    python_callable=process_blob_data,
+    provide_context=True,
     dag=dag
 )
     
@@ -144,7 +142,7 @@ pags_nation >> nation_data >> img_nation
 pags_players >> players_data >> img_players
 
 # Combine all the parallel task lists to run before task_list_blobs
-[img_club, img_league, img_nation, img_players] >> task_list_blobs
+[img_club, img_league, img_nation, img_players] >> identify_blobs_task
 
 # Continue with the remaining tasks
-task_list_blobs >> task_read_json_blobs >> task_process_json_data
+identify_blobs_task >> read_blob_data_task >> process_blob_data_task
